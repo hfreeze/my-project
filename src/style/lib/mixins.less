@@ -1,0 +1,35 @@
+// font size
+@font-size: 14px;
+
+// color
+@blue-color: #0066cc;
+
+// form height
+@input-height: 25px;
+
+
+
+
+
+// button
+.form-button(@color: @blue-color) {
+  .form-button {
+    display: inline-block;
+    padding: 0 10px;
+    height: @input-height;
+    line-height: @input-height;
+    color: #fff;
+    background-color: @color;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten(@color, 5%);
+    }
+    &.disabled {
+      background-color: lighten(@color, 25%);
+      cursor: not-allowed;
+    }
+  }
+}
