@@ -35,7 +35,7 @@ gulpfile.js // gulp配置文件
 package.json // npm配置文件
 webpack.config.js // webpack配置文件
 ```
-下载项目后首先安装npm依赖包：
+项目下载后首先安装npm依赖包：
 ```
 npm install
 ```
