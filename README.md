@@ -183,8 +183,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var srcDir = path.resolve(process.cwd(), 'src');
 
-
-
+// 遍历入口文件
 function getEntry() {
   var jsPath = path.resolve(srcDir, 'js');
   var dirs = fs.readdirSync(jsPath);
@@ -199,9 +198,7 @@ function getEntry() {
   return files;
 }
 
-
-
-
+// 基础配置
 module.exports = {
   entry: getEntry(),
   output: {
@@ -294,4 +291,6 @@ webpack主要任务：
   }
 }
 ```
-虽然gulp任务和webpack任务可以分别在命令行内执行，但还是推荐把任务命令统一写在package.json中方便管理，并且可以利用npm钩子方便任务在正确的顺序中调用。
+虽然gulp任务和webpack任务可以分别在命令行内执行，但还是推荐把任务命令统一写在package.json中方便管理，并且可以利用npm钩子方便任务在正确的顺序中调用。关于npm钩子可以参考[npm scripts 使用指南](http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html)
+
+> 以上只是简单的介绍目录结构和各个配置文件，以后我会慢慢补充解释细节。
