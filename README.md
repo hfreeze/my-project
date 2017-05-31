@@ -44,6 +44,10 @@ npm install
 npm run dev // 监听gulp任务
 npm run watch // 监听js
 ```
+启动生产环境（开发完成后）
+```
+npm run pro
+```
 ### 配置文件介绍
 #### gulpfile.js
 ```javascript
