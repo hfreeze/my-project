@@ -39,7 +39,7 @@ webpack.config.js // webpack配置文件
 ```
 npm install
 ```
-启动开发环境。这里需要开启两个监听窗口，分别是gulp和webpack。后面我会仔细介绍这两个。
+启动开发环境。这里需要开启两个监听窗口，分别是gulp和webpack。
 ```
 npm run dev // 监听gulp任务
 npm run watch // 监听js
