@@ -162,11 +162,9 @@ gulp.task('watch', function() {
   gulp.watch(paths.src.html + '/*.html', ['fileinclude']);
 });
 
-
 // dev: ($ gulp)
 // pro: ($ gulp --type pro)
 gulp.task('default', ['copy', 'less', 'fileinclude']);
-
 
 // js 由 webpack 处理
 ```
@@ -295,6 +293,6 @@ webpack主要任务：
   }
 }
 ```
-虽然gulp任务和webpack任务可以分别在命令行内执行，但还是推荐把任务命令统一写在package.json中方便管理，并且可以利用npm钩子方便任务在正确的顺序中调用。关于npm钩子可以参考[npm scripts 使用指南](http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html)。
+虽然gulp任务和webpack任务可以分别在命令行内执行，但还是推荐把任务命令统一写在package.json中方便管理，并且可以利用npm钩子方便任务按正确的顺序调用。关于npm钩子可以参考[npm scripts 使用指南](http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html)。
 
 > 以上只是简单的介绍目录结构和各个配置文件，以后我会慢慢补充解释细节。
