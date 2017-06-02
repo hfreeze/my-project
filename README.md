@@ -64,6 +64,7 @@ var paths = {
     img: 'src/img',
     js: 'src/js',
     less: 'src/style/less',
+    cssLib: 'src/style/lib',
     font: 'src/style/fonts',
     sprite: 'src/sprite',
     html: 'src/view'
@@ -85,7 +86,7 @@ gulp.task('clean', function() {
   return del(['dist']);
 });
 
-// copy (img and fonts) 如果是生产环境执行图片压缩
+// copy (img cssLib and fonts) 如果是生产环境执行图片压缩
 gulp.task('copy', function() {
   var img = gulp.src(paths.src.img + '/*')
     .pipe($.changed(paths.dist.img))
@@ -96,8 +97,13 @@ gulp.task('copy', function() {
     .pipe($.changed(paths.dist.font))
     .pipe(gulp.dest(paths.dist.font));
 
+  var cssLib = gulp.src(paths.src.cssLib + '/*.css')
+    .pipe($.changed(paths.dist.css))
+    .pipe(gulp.dest(paths.dist.css));
+
   stream.add(img);
   stream.add(font);
+  stream.add(cssLib);
   return stream.isEmpty() ? null : stream;
 });
 
